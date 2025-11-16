@@ -3,6 +3,8 @@
 #cron entry
 #*/5 * * * * /usr/bin/flock -w 1 /run/lock/technitium_dhcp_scope_reserve_sync.lock /home/<user>/bin/technitium_dhcp_scope_reserve_sync.py >> /home/<user>/log/technitium_dhcp_scope_reserve_sync-`/usr/bin/date +\%F`.log
 
+#Scope must exist on the destination node, only reservations are synced.
+
 import datetime
 import time
 import requests
